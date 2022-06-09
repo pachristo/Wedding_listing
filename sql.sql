@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.7
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jun 08, 2022 at 02:55 PM
--- Server version: 10.3.34-MariaDB-cll-lve
--- PHP Version: 7.4.29
+-- Host: localhost
+-- Generation Time: Jun 09, 2022 at 09:48 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.4.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bitguler_ithwed`
+-- Database: `fiver_ithwed`
 --
 
 -- --------------------------------------------------------
@@ -192,72 +191,98 @@ CREATE TABLE `listings` (
 --
 
 INSERT INTO `listings` (`id`, `title`, `cat_id`, `user_id`, `address`, `price`, `city`, `state`, `region`, `country`, `status`, `description`, `images`, `videos`, `map_latitude`, `map_longitude`, `facebook_link`, `twitter_link`, `instagram_link`, `youtube_link`, `created_at`, `updated_at`, `is_featured`, `is_admin`, `is_promoted`, `is_approved`) VALUES
-(5, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"EMXF\":\"cake5jpegl3oczECck6msmUAeZj8SC7BVdbj2MAl9bFhMz2B4.jpeg\"},{\"64KI\":\"cake4jpeg4pbIWS4B2nV2q5Om1gPQFnxsaG2bxKBPzSjJXvG2.jpeg\"},{\"VjWd\":\"cake3jpegOoifc6lOQqTbphocsyLub5Wlfefx8cUPcetC9RY7.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 01:18:52', '2022-04-27 19:10:25', 0, 1, 1, 0),
-(6, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"EMXF\":\"cake5jpegl3oczECck6msmUAeZj8SC7BVdbj2MAl9bFhMz2B4.jpeg\"},{\"64KI\":\"cake4jpeg4pbIWS4B2nV2q5Om1gPQFnxsaG2bxKBPzSjJXvG2.jpeg\"},{\"VjWd\":\"cake3jpegOoifc6lOQqTbphocsyLub5Wlfefx8cUPcetC9RY7.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 01:18:52', '2022-04-22 01:18:52', 0, 1, 0, 0),
-(7, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"EMXF\":\"cake5jpegl3oczECck6msmUAeZj8SC7BVdbj2MAl9bFhMz2B4.jpeg\"},{\"64KI\":\"cake4jpeg4pbIWS4B2nV2q5Om1gPQFnxsaG2bxKBPzSjJXvG2.jpeg\"},{\"VjWd\":\"cake3jpegOoifc6lOQqTbphocsyLub5Wlfefx8cUPcetC9RY7.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 01:18:52', '2022-04-22 01:18:52', 0, 1, 0, 0),
-(8, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"EMXF\":\"cake5jpegl3oczECck6msmUAeZj8SC7BVdbj2MAl9bFhMz2B4.jpeg\"},{\"64KI\":\"cake4jpeg4pbIWS4B2nV2q5Om1gPQFnxsaG2bxKBPzSjJXvG2.jpeg\"},{\"VjWd\":\"cake3jpegOoifc6lOQqTbphocsyLub5Wlfefx8cUPcetC9RY7.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 01:18:52', '2022-04-22 01:18:52', 0, 1, 0, 0),
-(9, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"EMXF\":\"cake5jpegl3oczECck6msmUAeZj8SC7BVdbj2MAl9bFhMz2B4.jpeg\"},{\"64KI\":\"cake4jpeg4pbIWS4B2nV2q5Om1gPQFnxsaG2bxKBPzSjJXvG2.jpeg\"},{\"VjWd\":\"cake3jpegOoifc6lOQqTbphocsyLub5Wlfefx8cUPcetC9RY7.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 01:18:52', '2022-04-22 01:18:52', 0, 1, 0, 0),
-(10, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"EuPc\":\"cakejpegu0LahhWqb2HX0pt5RkGdOltzgjofMfKUJfIZCoHQ.jpeg\"},{\"IXcv\":\"cake2jpegKagtv98wFAjHzSQa7QsxT3LVD7nL8xHUENokzzhY.jpeg\"},{\"F60T\":\"cake3jpeggtbTpgddsQeTamGZ7wqhNLbhBC4XncnLmQOWqd7J.jpeg\"},{\"fj2Y\":\"cake4jpegJtrYeBUuSWBdEYAENqVALbbDwHpMmldX1tMUiFEc.jpeg\"},{\"HRhL\":\"cake5jpegXQeMXNkPJ8SuGCyPp4UNF2LNuNoj8Hq4mBFKQF7M.jpeg\"},{\"VB3Q\":\"cake_and_dessertpngxJzCZsJdNmlWVEUwT3pxwbTz67kQC2kJvot5gYGJ.png\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 10:17:32', '2022-04-22 10:17:32', 0, 1, 0, 0),
-(11, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"KYKZ\":\"cakejpegJGmA5ehOdQm6MSviD1ywzByI8B96E8w94kGHoIe5.jpeg\"},{\"37ce\":\"cake2jpegTVoFKyeKaEdYwNGTY35PMjAeIcnZhTc2JIoowGg1.jpeg\"},{\"G1D7\":\"cake3jpeghrWhvPHP5RRVjlGLagY1s6bZjYPRzftsVRYFxq3p.jpeg\"},{\"BHwo\":\"cake4jpegUmKl3tmK0DeMhjMdtatLbUdbqCWfbrTcJMvGU0nB.jpeg\"},{\"egzL\":\"cake5jpeggjqKsCAqjtstzUmEJj5xszbMIJKGQ5OD82HJghoy.jpeg\"},{\"wBrM\":\"cake_and_dessertpngoYjUthH1yWM32d5APciEX5DfqOSo38XaVNLyRIEN.png\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 10:18:40', '2022-04-22 10:18:40', 0, 1, 0, 0),
-(12, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '1', 'cake', '[{\"bHsI\":\"cakejpegXreEKbHI5TnWfzoXTmKISI2GxBVAXYtd5Gkczdn2.jpeg\"},{\"NQ9A\":\"cake2jpegmCdtnjzp1s7t748HmYfTyxTv04RIVLnG470BR0o6.jpeg\"},{\"5ZKZ\":\"cake3jpeg9yCMcPTg9XEDP3DPEU5ihdUPZsO2ox6VSjOVREuW.jpeg\"},{\"Ezuu\":\"cake4jpegkxlH1b9LJ1nH0lPFVZXSPsg7shbw2hvZ0FxhDjdp.jpeg\"},{\"7ynD\":\"cake5jpegU7xWsguKM0JYPw2EtdeKrNFI1Bp9u3HyQdp37atM.jpeg\"},{\"J3FS\":\"cake_and_dessertpnga132oeaSerI2HtZ20tvgqpcQCut0mLHo2dVYoT9c.png\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 10:37:51', '2022-04-22 17:12:20', 0, 1, 0, 0),
-(13, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[{\"F9Zu\":\"cakejpegDK41uQvSsuSgSekUDDeyQLlttAoTPoOMB4DdPzsH.jpeg\"},{\"TycW\":\"cake2jpegO0nIc149kBuCk9RPsHtHclZ6tY4FNNF8GbNigQYP.jpeg\"},{\"Gkg8\":\"cake3jpegVJ2cYdOHqFlRNggLmKaTRXDctZS5fnozuZFiFyui.jpeg\"},{\"tsmR\":\"cake4jpegABIG2eJFjW7QFVpWQv88DCxU0zdZTm2PEeGhvEgY.jpeg\"},{\"eWyN\":\"cake5jpegRU9w5Phc37yCqb3itBaqewhFYRArH6pll7Rh62R2.jpeg\"},{\"WPii\":\"cake_and_dessertpngulmAiQqyAz3GXlUffhUwasxg8xfCVBFqPP2iGbPy.png\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 10:50:58', '2022-05-30 12:54:32', 0, 1, 0, 0),
-(14, 'Cake 14', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"vSGn\":\"cake3jpegxbmUAXV3rLN4AiRh1xio5bBioYks7G5AcquPb8IQ.jpeg\"},{\"zRlH\":\"cake2jpegH2VL4W7A6gRr6vSL9QbVeFihIPzqfosXomEpNl8Y.jpeg\"},{\"aptS\":\"cake3jpegZ7lf4K1wmU5l8JkPfqmcXJy58Abjfmzg1VOnNCTA.jpeg\"},{\"yix6\":\"cake2jpegf4qPoAnHAhbGtE0LZCCEKSqZbu0hTFVkGVKHhXrY.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 10:52:25', '2022-04-22 12:34:27', 0, 1, 0, 0),
-(21, 'Cake 14', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[{\"XhuW\":\"cake4jpegWsKRsHscyIqOJjlCQlD0j6burno3s3y7eeV0klUt.jpeg\"},{\"A7rX\":\"cake3jpeg3hCsPBbpGIiCHVVirWZYSNR0gGIC2SpGX6D7oF78.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-25 10:31:32', '2022-06-07 06:38:18', 0, 0, 0, 0),
-(22, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"SmwW\":\"cake5jpegYLbrpbtBSBiunWN3oFh8BPwT4y0e8O3jAqkvC5Yq.jpeg\"},{\"7Uco\":\"cake4jpeghsm1jA35U6YZ62JdyXvhiAnCbBCgChorR2pxbrGG.jpeg\"},{\"i7zd\":\"cake3jpegYDLxeeyozfSicTTIucPA1imQJsSiXtFcdnfr3gZQ.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-25 10:34:12', '2022-04-25 10:34:12', 0, 0, 0, 0),
-(23, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"EMXF\":\"cake5jpegl3oczECck6msmUAeZj8SC7BVdbj2MAl9bFhMz2B4.jpeg\"},{\"64KI\":\"cake4jpeg4pbIWS4B2nV2q5Om1gPQFnxsaG2bxKBPzSjJXvG2.jpeg\"},{\"VjWd\":\"cake3jpegOoifc6lOQqTbphocsyLub5Wlfefx8cUPcetC9RY7.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-25 10:58:47', '2022-04-25 10:58:47', 0, 0, 0, 0),
-(24, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-24 01:03:53', '2022-05-24 01:03:53', 0, 0, 0, 0),
-(25, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-24 08:29:47', '2022-05-24 08:29:47', 0, 0, 0, 0),
-(26, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 08:29:54', '2022-05-25 08:29:54', 0, 0, 0, 0),
-(27, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 08:30:06', '2022-05-25 08:30:06', 0, 0, 0, 0),
-(28, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyoi', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 08:47:29', '2022-05-25 08:47:29', 0, 0, 0, 0),
-(29, 'Cake', '21', '9', '12 Ibiam street Uyo', '23232', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 09:21:57', '2022-05-25 09:21:57', 0, 0, 0, 0),
-(30, 'Cake', '21', '9', '12 Ibiam street Uyo', '23232', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, '323', NULL, '2022-05-25 09:22:07', '2022-05-30 12:50:49', 0, 0, 0, 0),
-(31, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 09:23:32', '2022-05-25 09:23:32', 0, 0, 0, 0),
-(32, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"2NrO\":\"screenshot_1pngwHacIOf1hzANLMSYeb2TvT5SVnF9U6rYaEnUGbAO.png\"},{\"widf\":\"screenshot_2pngV0lzTEumt8v8JOqpnLXK1EK8REH8R1d9yZBNmG15.png\"},{\"yDYT\":\"screenshot_3pngq8GkapgnZ0rLMuNV3xR1XjACXJfgmO24wGCHq1nA.png\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 09:24:04', '2022-05-25 09:24:04', 0, 0, 0, 0),
-(33, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"3Sk0\":\"screenshot_1pngklweyapJ74jLTbYjqdHUQenwtmpAbqHht5ZOqy5i.png\"},{\"Bt8U\":\"screenshot_2pngCs9Y8LQVLxYJgCZCOPjWjw1bf7mFh2iXGH4gIoFO.png\"},{\"wm61\":\"screenshot_3pngxrqhu5aioKR7x2LzJQoHiSxf95pahWJKrNjphMNq.png\"}]', '[]', '112.32', NULL, NULL, NULL, NULL, NULL, '2022-05-25 09:26:36', '2022-05-25 09:26:36', 0, 0, 0, 0),
-(34, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"0dys\":\"screenshot_1pngD4KFfJAnnqdZnCHCfHuJHh8recrkU9RkT2AxHGKI.png\"},{\"uUOb\":\"screenshot_2pngllofBESNrfQw4LtPobeoEal7ZqMtkmEe1Xdw6NC0.png\"},{\"aJqq\":\"screenshot_3pngNJi0weXcIshvNZpHCE9LbysjU4G6nE0tLoRlYN04.png\"}]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-05-25 09:26:50', '2022-05-25 09:26:50', 0, 0, 0, 0),
-(35, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 09:47:10', '2022-05-25 09:47:10', 0, 0, 0, 0),
-(36, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 09:53:07', '2022-05-25 09:53:07', 0, 0, 0, 0),
-(37, 'Pie', '20', '9', '12 Ibiam street Polo', '50,000', 'Polo', 'Pawna', 'south south', 'India', '0', 'pie', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 23:29:19', '2022-05-25 23:29:19', 0, 0, 0, 0),
-(38, 'Pie', '20', '9', '12 Ibiam street Polo', '50000', 'Polo', 'Pawna', 'south south', 'India', '0', 'pie', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 23:29:42', '2022-05-25 23:29:42', 0, 0, 0, 0),
-(39, 'Pie', '20', '9', '12 Ibiam street Polo', '50000', 'Polo', 'Pawna', 'south south', 'India', '0', 'pie', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 23:33:40', '2022-05-25 23:33:40', 0, 0, 0, 0),
-(40, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:07', '2022-05-26 03:27:07', 0, 0, 0, 0),
-(41, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:10', '2022-05-26 03:27:10', 0, 0, 0, 0),
-(42, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:12', '2022-05-26 03:27:12', 0, 0, 0, 0),
-(43, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:13', '2022-05-26 03:27:13', 0, 0, 0, 0),
-(44, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:14', '2022-05-26 03:27:14', 0, 0, 0, 0),
-(45, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:15', '2022-05-26 03:27:15', 0, 0, 0, 0),
-(46, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:16', '2022-05-26 03:27:16', 0, 0, 0, 0),
-(47, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:17', '2022-05-26 03:27:17', 0, 0, 0, 0),
-(48, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:18', '2022-05-26 03:27:18', 0, 0, 0, 0),
-(49, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:19', '2022-05-26 03:27:19', 0, 0, 0, 0),
-(50, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:20', '2022-05-26 03:27:20', 0, 0, 0, 0),
-(51, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:22', '2022-05-26 03:27:22', 0, 0, 0, 0),
-(52, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:23', '2022-05-26 03:27:23', 0, 0, 0, 0),
-(53, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:24', '2022-05-26 03:27:24', 0, 0, 0, 0),
-(54, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:25', '2022-05-26 03:27:25', 0, 0, 0, 0),
-(55, 'Cake Shopping', '21', '9', 'No 12, Ibafo', '29000', 'Ogbomosho', 'Oyo', 'south north', 'Nigeria', '0', 'We bake for selling', '[]', '[]', '112', '2233', NULL, NULL, NULL, NULL, '2022-05-30 12:41:54', '2022-05-30 12:41:54', 0, 0, 0, 0),
-(56, 'Cake Shopping', '12', '9', 'No 12, Ibafo', '29000', 'Ogbomosho', 'Oyo', 'south north', 'Nigeria', '4', 'We bake for selling', '[]', '[]', '112', '2233', NULL, NULL, NULL, NULL, '2022-05-30 12:42:11', '2022-06-07 06:26:58', 0, 0, 0, 0),
-(57, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 12:46:30', '2022-05-30 12:46:30', 0, 0, 0, 0),
-(58, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:42:24', '2022-05-30 14:42:24', 0, 0, 0, 0),
-(59, 'Cake', NULL, '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:43:02', '2022-06-07 08:49:58', 0, 0, 0, 0),
-(60, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:43:13', '2022-05-30 14:43:13', 0, 0, 0, 0),
-(61, 'Cake', '22', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:43:21', '2022-05-30 14:43:21', 0, 0, 0, 0),
-(62, 'Cake 14', '20', '9', '12 Ibiam street Uyo', '30000', 'uyo', 'Akwa Ibom', NULL, 'Nigeria', '0', 'hsjjsddhdj', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-05-30 14:43:39', '2022-06-07 08:35:59', 0, 0, 0, 0),
-(63, 'Cake', '1', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:43:47', '2022-06-07 07:09:49', 0, 0, 0, 0),
-(64, 'Cake', '10', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:43:57', '2022-06-07 07:10:28', 0, 0, 0, 0),
-(65, 'Cake', '19', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:44:09', '2022-06-07 07:08:51', 0, 0, 0, 0),
-(66, 'Blessing', '20', '9', '12 Ibiam street Uyo', '20000', 'uyo', 'Akwa Ibom', NULL, 'Nigeria', '0', 'A florist is someone whose job arranging and selling cut flowers.', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-05-30 14:44:38', '2022-06-07 08:57:45', 0, 0, 0, 0),
-(67, 'Cake', '20', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:45:27', '2022-06-07 07:07:47', 0, 0, 0, 0),
-(68, 'Cake', '20', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south', 'Nigeria', '4', 'cake', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-05-30 14:46:00', '2022-06-07 07:05:15', 0, 0, 0, 0),
-(69, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 15:09:43', '2022-06-07 06:49:46', 0, 0, 0, 0),
-(70, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-05-31 19:06:58', '2022-06-07 06:47:13', 0, 0, 0, 0),
-(71, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-05-31 19:07:45', '2022-06-07 06:46:16', 0, 0, 0, 0),
-(72, 'Blessing', '21', '9', 'No1, Adorable novow street', '20000', 'Lagos', 'Lagos', 'South south', 'Nigeria', '4', 'jsjsjjsjdjsjsjdjdjdjdjdjjd', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-05-31 20:16:33', '2022-06-06 02:39:18', 0, 0, 0, 0),
-(73, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-03 21:26:41', '2022-06-06 02:38:58', 0, 0, 0, 0),
-(74, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-06 03:53:15', '2022-06-07 06:21:06', 0, 0, 0, 0),
-(75, 'Cake 14', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-06 03:53:48', '2022-06-07 07:23:57', 0, 0, 0, 0),
-(76, 'Good Baby', '21', '9', 'No 2, Omolola estate.', '15000', 'Lagos', 'Lagos', 'South', 'Nigeria', '0', 'The best service and support you want to assure', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-06-08 07:49:44', '2022-06-08 07:49:44', 0, 0, 0, 0);
+(5, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"EMXF\":\"cake5jpegl3oczECck6msmUAeZj8SC7BVdbj2MAl9bFhMz2B4.jpeg\"},{\"64KI\":\"cake4jpeg4pbIWS4B2nV2q5Om1gPQFnxsaG2bxKBPzSjJXvG2.jpeg\"},{\"VjWd\":\"cake3jpegOoifc6lOQqTbphocsyLub5Wlfefx8cUPcetC9RY7.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 01:18:52', '2022-06-09 12:02:40', 0, 1, 1, 1),
+(6, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"EMXF\":\"cake5jpegl3oczECck6msmUAeZj8SC7BVdbj2MAl9bFhMz2B4.jpeg\"},{\"64KI\":\"cake4jpeg4pbIWS4B2nV2q5Om1gPQFnxsaG2bxKBPzSjJXvG2.jpeg\"},{\"VjWd\":\"cake3jpegOoifc6lOQqTbphocsyLub5Wlfefx8cUPcetC9RY7.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 01:18:52', '2022-06-09 12:02:40', 0, 1, 0, 1),
+(7, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"EMXF\":\"cake5jpegl3oczECck6msmUAeZj8SC7BVdbj2MAl9bFhMz2B4.jpeg\"},{\"64KI\":\"cake4jpeg4pbIWS4B2nV2q5Om1gPQFnxsaG2bxKBPzSjJXvG2.jpeg\"},{\"VjWd\":\"cake3jpegOoifc6lOQqTbphocsyLub5Wlfefx8cUPcetC9RY7.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 01:18:52', '2022-06-09 12:02:40', 0, 1, 0, 1),
+(8, 'pan cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"EMXF\":\"cake5jpegl3oczECck6msmUAeZj8SC7BVdbj2MAl9bFhMz2B4.jpeg\"},{\"64KI\":\"cake4jpeg4pbIWS4B2nV2q5Om1gPQFnxsaG2bxKBPzSjJXvG2.jpeg\"},{\"VjWd\":\"cake3jpegOoifc6lOQqTbphocsyLub5Wlfefx8cUPcetC9RY7.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 01:18:52', '2022-06-09 12:02:40', 0, 1, 0, 1),
+(9, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"EMXF\":\"cake5jpegl3oczECck6msmUAeZj8SC7BVdbj2MAl9bFhMz2B4.jpeg\"},{\"64KI\":\"cake4jpeg4pbIWS4B2nV2q5Om1gPQFnxsaG2bxKBPzSjJXvG2.jpeg\"},{\"VjWd\":\"cake3jpegOoifc6lOQqTbphocsyLub5Wlfefx8cUPcetC9RY7.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 01:18:52', '2022-06-09 12:02:40', 0, 1, 0, 1),
+(10, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"EuPc\":\"cakejpegu0LahhWqb2HX0pt5RkGdOltzgjofMfKUJfIZCoHQ.jpeg\"},{\"IXcv\":\"cake2jpegKagtv98wFAjHzSQa7QsxT3LVD7nL8xHUENokzzhY.jpeg\"},{\"F60T\":\"cake3jpeggtbTpgddsQeTamGZ7wqhNLbhBC4XncnLmQOWqd7J.jpeg\"},{\"fj2Y\":\"cake4jpegJtrYeBUuSWBdEYAENqVALbbDwHpMmldX1tMUiFEc.jpeg\"},{\"HRhL\":\"cake5jpegXQeMXNkPJ8SuGCyPp4UNF2LNuNoj8Hq4mBFKQF7M.jpeg\"},{\"VB3Q\":\"cake_and_dessertpngxJzCZsJdNmlWVEUwT3pxwbTz67kQC2kJvot5gYGJ.png\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 10:17:32', '2022-06-09 12:02:40', 0, 1, 0, 1),
+(11, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"KYKZ\":\"cakejpegJGmA5ehOdQm6MSviD1ywzByI8B96E8w94kGHoIe5.jpeg\"},{\"37ce\":\"cake2jpegTVoFKyeKaEdYwNGTY35PMjAeIcnZhTc2JIoowGg1.jpeg\"},{\"G1D7\":\"cake3jpeghrWhvPHP5RRVjlGLagY1s6bZjYPRzftsVRYFxq3p.jpeg\"},{\"BHwo\":\"cake4jpegUmKl3tmK0DeMhjMdtatLbUdbqCWfbrTcJMvGU0nB.jpeg\"},{\"egzL\":\"cake5jpeggjqKsCAqjtstzUmEJj5xszbMIJKGQ5OD82HJghoy.jpeg\"},{\"wBrM\":\"cake_and_dessertpngoYjUthH1yWM32d5APciEX5DfqOSo38XaVNLyRIEN.png\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 10:18:40', '2022-06-09 12:02:40', 0, 1, 0, 1),
+(12, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '1', 'cake', '[{\"bHsI\":\"cakejpegXreEKbHI5TnWfzoXTmKISI2GxBVAXYtd5Gkczdn2.jpeg\"},{\"NQ9A\":\"cake2jpegmCdtnjzp1s7t748HmYfTyxTv04RIVLnG470BR0o6.jpeg\"},{\"5ZKZ\":\"cake3jpeg9yCMcPTg9XEDP3DPEU5ihdUPZsO2ox6VSjOVREuW.jpeg\"},{\"Ezuu\":\"cake4jpegkxlH1b9LJ1nH0lPFVZXSPsg7shbw2hvZ0FxhDjdp.jpeg\"},{\"7ynD\":\"cake5jpegU7xWsguKM0JYPw2EtdeKrNFI1Bp9u3HyQdp37atM.jpeg\"},{\"J3FS\":\"cake_and_dessertpnga132oeaSerI2HtZ20tvgqpcQCut0mLHo2dVYoT9c.png\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 10:37:51', '2022-06-09 12:02:40', 0, 1, 0, 1),
+(13, 'Cake', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[{\"F9Zu\":\"cakejpegDK41uQvSsuSgSekUDDeyQLlttAoTPoOMB4DdPzsH.jpeg\"},{\"TycW\":\"cake2jpegO0nIc149kBuCk9RPsHtHclZ6tY4FNNF8GbNigQYP.jpeg\"},{\"Gkg8\":\"cake3jpegVJ2cYdOHqFlRNggLmKaTRXDctZS5fnozuZFiFyui.jpeg\"},{\"tsmR\":\"cake4jpegABIG2eJFjW7QFVpWQv88DCxU0zdZTm2PEeGhvEgY.jpeg\"},{\"eWyN\":\"cake5jpegRU9w5Phc37yCqb3itBaqewhFYRArH6pll7Rh62R2.jpeg\"},{\"WPii\":\"cake_and_dessertpngulmAiQqyAz3GXlUffhUwasxg8xfCVBFqPP2iGbPy.png\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 10:50:58', '2022-06-09 12:02:40', 0, 1, 0, 1),
+(14, 'Cake 14', '21', NULL, '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"vSGn\":\"cake3jpegxbmUAXV3rLN4AiRh1xio5bBioYks7G5AcquPb8IQ.jpeg\"},{\"zRlH\":\"cake2jpegH2VL4W7A6gRr6vSL9QbVeFihIPzqfosXomEpNl8Y.jpeg\"},{\"aptS\":\"cake3jpegZ7lf4K1wmU5l8JkPfqmcXJy58Abjfmzg1VOnNCTA.jpeg\"},{\"yix6\":\"cake2jpegf4qPoAnHAhbGtE0LZCCEKSqZbu0hTFVkGVKHhXrY.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-22 10:52:25', '2022-06-09 12:02:40', 0, 1, 0, 1),
+(21, 'Cake 14', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[{\"XhuW\":\"cake4jpegWsKRsHscyIqOJjlCQlD0j6burno3s3y7eeV0klUt.jpeg\"},{\"A7rX\":\"cake3jpeg3hCsPBbpGIiCHVVirWZYSNR0gGIC2SpGX6D7oF78.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-25 10:31:32', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(22, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"SmwW\":\"cake5jpegYLbrpbtBSBiunWN3oFh8BPwT4y0e8O3jAqkvC5Yq.jpeg\"},{\"7Uco\":\"cake4jpeghsm1jA35U6YZ62JdyXvhiAnCbBCgChorR2pxbrGG.jpeg\"},{\"i7zd\":\"cake3jpegYDLxeeyozfSicTTIucPA1imQJsSiXtFcdnfr3gZQ.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-25 10:34:12', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(23, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"EMXF\":\"cake5jpegl3oczECck6msmUAeZj8SC7BVdbj2MAl9bFhMz2B4.jpeg\"},{\"64KI\":\"cake4jpeg4pbIWS4B2nV2q5Om1gPQFnxsaG2bxKBPzSjJXvG2.jpeg\"},{\"VjWd\":\"cake3jpegOoifc6lOQqTbphocsyLub5Wlfefx8cUPcetC9RY7.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-04-25 10:58:47', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(24, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-24 01:03:53', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(25, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-24 08:29:47', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(26, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 08:29:54', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(27, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 08:30:06', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(28, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyoi', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 08:47:29', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(29, 'Cake', '21', '9', '12 Ibiam street Uyo', '23232', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 09:21:57', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(30, 'Cake', '21', '9', '12 Ibiam street Uyo', '23232', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, '323', NULL, '2022-05-25 09:22:07', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(31, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 09:23:32', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(32, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"2NrO\":\"screenshot_1pngwHacIOf1hzANLMSYeb2TvT5SVnF9U6rYaEnUGbAO.png\"},{\"widf\":\"screenshot_2pngV0lzTEumt8v8JOqpnLXK1EK8REH8R1d9yZBNmG15.png\"},{\"yDYT\":\"screenshot_3pngq8GkapgnZ0rLMuNV3xR1XjACXJfgmO24wGCHq1nA.png\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 09:24:04', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(33, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"3Sk0\":\"screenshot_1pngklweyapJ74jLTbYjqdHUQenwtmpAbqHht5ZOqy5i.png\"},{\"Bt8U\":\"screenshot_2pngCs9Y8LQVLxYJgCZCOPjWjw1bf7mFh2iXGH4gIoFO.png\"},{\"wm61\":\"screenshot_3pngxrqhu5aioKR7x2LzJQoHiSxf95pahWJKrNjphMNq.png\"}]', '[]', '112.32', NULL, NULL, NULL, NULL, NULL, '2022-05-25 09:26:36', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(34, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"0dys\":\"screenshot_1pngD4KFfJAnnqdZnCHCfHuJHh8recrkU9RkT2AxHGKI.png\"},{\"uUOb\":\"screenshot_2pngllofBESNrfQw4LtPobeoEal7ZqMtkmEe1Xdw6NC0.png\"},{\"aJqq\":\"screenshot_3pngNJi0weXcIshvNZpHCE9LbysjU4G6nE0tLoRlYN04.png\"}]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-05-25 09:26:50', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(35, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 09:47:10', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(36, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 09:53:07', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(37, 'Pie', '20', '9', '12 Ibiam street Polo', '50,000', 'Polo', 'Pawna', 'south south', 'India', '0', 'pie', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 23:29:19', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(38, 'Pie', '20', '9', '12 Ibiam street Polo', '50000', 'Polo', 'Pawna', 'south south', 'India', '0', 'pie', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 23:29:42', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(39, 'Pie', '20', '9', '12 Ibiam street Polo', '50000', 'Polo', 'Pawna', 'south south', 'India', '0', 'pie', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-25 23:33:40', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(40, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:07', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(41, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:10', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(42, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:12', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(43, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:13', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(44, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:14', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(45, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:15', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(46, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:16', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(47, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:17', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(48, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:18', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(49, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:19', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(50, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:20', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(51, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:22', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(52, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:23', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(53, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:24', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(54, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-26 03:27:25', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(55, 'Cake Shopping', '21', '9', 'No 12, Ibafo', '29000', 'Ogbomosho', 'Oyo', 'south north', 'Nigeria', '0', 'We bake for selling', '[]', '[]', '112', '2233', NULL, NULL, NULL, NULL, '2022-05-30 12:41:54', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(56, 'Cake Shopping', '12', '9', 'No 12, Ibafo', '29000', 'Ogbomosho', 'Oyo', 'south north', 'Nigeria', '4', 'We bake for selling', '[]', '[]', '112', '2233', NULL, NULL, NULL, NULL, '2022-05-30 12:42:11', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(57, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 12:46:30', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(58, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:42:24', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(59, 'Cake', NULL, '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:43:02', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(60, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:43:13', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(61, 'Cake', '22', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:43:21', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(62, 'Cake 14', '20', '9', '12 Ibiam street Uyo', '30000', 'uyo', 'Akwa Ibom', NULL, 'Nigeria', '0', 'hsjjsddhdj', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-05-30 14:43:39', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(63, 'Cake', '1', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:43:47', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(64, 'Cake', '10', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:43:57', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(65, 'Cake', '19', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:44:09', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(66, 'Blessing', '20', '9', '12 Ibiam street Uyo', '20000', 'uyo', 'Akwa Ibom', NULL, 'Nigeria', '0', 'A florist is someone whose job arranging and selling cut flowers.', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-05-30 14:44:38', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(67, 'Cake', '20', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 14:45:27', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(68, 'Cake', '20', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south', 'Nigeria', '4', 'cake', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-05-30 14:46:00', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(69, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-05-30 15:09:43', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(70, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-05-31 19:06:58', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(71, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-05-31 19:07:45', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(72, 'Blessing', '21', '9', 'No1, Adorable novow street', '20000', 'Lagos', 'Lagos', 'South south', 'Nigeria', '4', 'jsjsjjsjdjsjsjdjdjdjdjdjjd', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-05-31 20:16:33', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(73, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-03 21:26:41', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(74, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-06 03:53:15', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(75, 'Cake 14', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-06 03:53:48', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(76, 'Good Baby', '21', '9', 'No 2, Omolola estate.', '15000', 'Lagos', 'Lagos', 'South', 'Nigeria', '0', 'The best service and support you want to assure', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-06-08 07:49:44', '2022-06-09 12:02:40', 0, 0, 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `listing_comments`
+--
+
+CREATE TABLE `listing_comments` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `listing_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `comment` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_approved` tinyint(1) DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `listing_comments`
+--
+
+INSERT INTO `listing_comments` (`id`, `user_id`, `listing_id`, `comment`, `is_approved`, `created_at`, `updated_at`) VALUES
+(1, '14', '5', 'i love this cake', 1, '2022-06-09 00:14:49', '2022-06-09 00:14:49'),
+(2, '14', '5', 'i love this cake', 1, '2022-06-09 00:14:56', '2022-06-09 00:14:56'),
+(3, '14', '5', 'i love this cake', 1, '2022-06-09 00:14:58', '2022-06-09 00:14:58'),
+(4, '14', '5', 'i love this cake', 1, '2022-06-09 00:14:59', '2022-06-09 00:14:59');
 
 -- --------------------------------------------------------
 
@@ -321,7 +346,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (45, '2022_05_13_203011_add_next_due_date', 34),
 (46, '2022_05_14_071756_add_next_due_date_active', 35),
 (47, '2022_05_14_071833_add_sub_count', 35),
-(48, '2022_05_14_073618_add_gateway', 36);
+(48, '2022_05_14_073618_add_gateway', 36),
+(49, '2022_06_08_202900_create_listing_comments_table', 37),
+(50, '2022_06_09_001629_add_comment_is_auto_aapprove', 38),
+(51, '2022_06_09_062043_create_react_listing_comments_table', 39);
 
 -- --------------------------------------------------------
 
@@ -421,6 +449,7 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('48574a205d37e62744d57972d17e20d1eb3736049cfaca35f3f44860c878f441c29db82137d5c318', 38, 10, 'ithwedapp', '[]', 0, '2022-06-07 20:11:02', '2022-06-07 20:11:02', '2023-06-07 16:11:02'),
 ('496dd014376aa70c2d1c27361797db1145b84e69d73ed94a3f0aba82dfee47f88f31b63754fcf6c6', 34, 10, 'ithwedapp', '[]', 0, '2022-06-03 19:08:39', '2022-06-03 19:08:39', '2023-06-03 15:08:39'),
 ('4cbdeea47d65be04531a9e826c0752c744abbbd16ef988ae9da030c9bfb5a35335dfb9c34ad2cd59', 34, 10, 'ithwedapp', '[]', 0, '2022-05-30 14:41:35', '2022-05-30 14:41:35', '2023-05-30 10:41:35'),
+('4dc336f825b1828e4d6e7e8fcb99597589fdeb25760d201b65c34e310a3ffd29c99b4e128fc3a2b3', 14, 10, 'ithwedapp', '[]', 0, '2022-06-08 19:22:21', '2022-06-08 19:22:21', '2023-06-08 20:22:21'),
 ('4dd0033c0a03413ec617123b685378f1966503dc9ecdda39a9a9ba1c366ba21ea644787ae9f8bda4', 34, 10, 'ithwedapp', '[]', 0, '2022-05-30 13:04:07', '2022-05-30 13:04:07', '2023-05-30 09:04:07'),
 ('4f617e0096d173bba76d8147a8ed0bd016c38d45d2727d4072166a357d9325f66913ac5bfcda530b', 9, 10, 'ithwedapp', '[]', 0, '2022-06-08 08:55:15', '2022-06-08 08:55:15', '2023-06-08 04:55:15'),
 ('4fd985e9244fea215386e30ff01887626e051e138ab02959bcdefdffac9ed86da508e5152fa69cbe', 3, 1, 'authToken', '[]', 0, '2022-04-14 07:15:40', '2022-04-14 07:15:40', '2023-04-14 08:15:40'),
@@ -617,9 +646,9 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('f42d0a194005c4e1be78ee48bdadf65afb33e02289a9b4f347ef65c0a77bb06d2d1ce313b8f5dfcc', 34, 10, 'ithwedapp', '[]', 0, '2022-05-30 14:14:48', '2022-05-30 14:14:48', '2023-05-30 10:14:48'),
 ('f4608f7263f4a5af77d6b02830cff1779dd08b50925eada4944ffc360faa9a5faa8b4438371edd3b', 34, 10, 'ithwedapp', '[]', 0, '2022-05-30 12:24:18', '2022-05-30 12:24:18', '2023-05-30 08:24:18'),
 ('f4ffce5efe67d8c1d241ca2c1fca6c532877f7b5e32e53173109bdf6632c0bbd22a062f98f0180e6', 9, 10, 'ithwedapp', '[]', 0, '2022-05-25 08:36:17', '2022-05-25 08:36:17', '2023-05-25 04:36:17'),
-('f52156d9213589bfe9646ac2f97f397f469d003f27d414779df9b11867a32671474b0f8b26fa770d', 34, 10, 'ithwedapp', '[]', 0, '2022-05-31 20:42:45', '2022-05-31 20:42:45', '2023-05-31 16:42:45'),
-('f572d8892aab6838a420062f96f21f4387ecb41b1e305c5fd9d64941b2f114f3f2e0ac2da637d0b1', 20, 10, 'ithwedapp', '[]', 0, '2022-05-21 17:08:02', '2022-05-21 17:08:02', '2023-05-21 13:08:02');
+('f52156d9213589bfe9646ac2f97f397f469d003f27d414779df9b11867a32671474b0f8b26fa770d', 34, 10, 'ithwedapp', '[]', 0, '2022-05-31 20:42:45', '2022-05-31 20:42:45', '2023-05-31 16:42:45');
 INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`) VALUES
+('f572d8892aab6838a420062f96f21f4387ecb41b1e305c5fd9d64941b2f114f3f2e0ac2da637d0b1', 20, 10, 'ithwedapp', '[]', 0, '2022-05-21 17:08:02', '2022-05-21 17:08:02', '2023-05-21 13:08:02'),
 ('f601a6856efef1254f6274b7bb07357e66761390efcea3c9b4a0daf96223a20dc41838b0113d5733', 9, 10, 'ithwedapp', '[]', 0, '2022-05-22 00:10:54', '2022-05-22 00:10:54', '2023-05-21 20:10:54'),
 ('f683c977a1037c0c0acf9442ffd5b66355f8340b2376ebccf5b35a4aef7a4ad3e336808f59af81ea', 34, 10, 'ithwedapp', '[]', 0, '2022-06-04 22:19:56', '2022-06-04 22:19:56', '2023-06-04 18:19:56'),
 ('f6ed5e3f5b00b3b961a761dbb6749e9787693f8d1e45f5e8c7167fbafc61b04366a69556f48151e3', 34, 10, 'ithwedapp', '[]', 0, '2022-05-30 14:31:36', '2022-05-30 14:31:36', '2023-05-30 10:31:36'),
@@ -820,10 +849,25 @@ CREATE TABLE `ratings` (
 --
 
 INSERT INTO `ratings` (`id`, `user_id`, `type`, `rating_no`, `listing_id`, `status`, `created_at`, `updated_at`, `comment`) VALUES
-(8, '9', NULL, '5', '8', '0', '2022-05-13 06:44:13', '2022-05-13 06:44:13', 'This is the best service ever'),
+(8, '9', NULL, '5', '8', '0', '2022-05-13 06:44:13', '2022-06-08 19:24:16', 'This is the best service ever'),
 (9, '9', NULL, '5', '8', '0', '2022-05-13 10:07:22', '2022-05-13 10:07:22', 'This is the best service ever'),
-(10, '9', NULL, '5', '8', '1', '2022-05-13 10:10:18', '2022-05-13 10:10:18', 'This is the best service ever'),
-(11, '9', NULL, '5', '8', '1', '2022-05-13 10:12:33', '2022-05-13 10:12:33', 'This is the best service ever');
+(11, '9', NULL, '5', '8', '1', '2022-05-13 10:12:33', '2022-05-13 10:12:33', 'This is the best service ever'),
+(12, '9', NULL, '5', '8', '1', '2022-06-08 18:59:33', '2022-06-08 18:59:33', 'This is the best service ever');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `react_listing_comments`
+--
+
+CREATE TABLE `react_listing_comments` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `comment_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -855,15 +899,16 @@ CREATE TABLE `settings` (
   `is_rating_auto_approve` tinyint(1) DEFAULT 1,
   `is_listing_auto_approve` tinyint(1) DEFAULT 1,
   `is_vendor_account_auto_approve` tinyint(1) DEFAULT 1,
-  `is_couple_account_auto_approve` tinyint(1) DEFAULT 1
+  `is_couple_account_auto_approve` tinyint(1) DEFAULT 1,
+  `is_listing_comment_approved` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `settings`
 --
 
-INSERT INTO `settings` (`id`, `contact_email`, `skype`, `phone1`, `phone2`, `phone3`, `address`, `flutterwave_key`, `flutterwave_secret`, `currency_code`, `currency_sign`, `maintenance_mode`, `created_at`, `updated_at`, `paypalKey`, `paypalSecret`, `paystackkey`, `paystackSecret`, `sitename`, `sitelink`, `is_rating_auto_approve`, `is_listing_auto_approve`, `is_vendor_account_auto_approve`, `is_couple_account_auto_approve`) VALUES
-(1, 'info@itheewed.com.ng', NULL, '+234-812-834-0493', '+234-812-834-0493', '+234-812-834-0493', '23 Kunle Ogunba St, Lekki Phase I  100263, Lagos, Nigeria', 'FLWPUBK_TEST-54dafcfc4d1439dbeddafa1d68a4f63b-X', 'FLWSECK_TEST-f918939659bd03f568fa7db85f2e6ae9-X', 'NGN', '₦', 0, NULL, '2022-04-27 10:29:20', 'AZL4dLjYas-gQoZZgXzWu_7DL9fFDMiqHNqLF9SJCNcnRYKf1mUdM3lqNg57-eqHzLzsTGsuyXEUrBv5', 'ECAWWPJCiBrimoFSJm6pMvFlGrxxT7PuudKA92Fn9aJt8MZa96xP3tstpelgmd7dOlOe60cPwWorb8gc', 'pk_test_6bf927c4fcf4172fae59cf27c7b7688853682f74', 'sk_test_413bcc87331a629a73514f44258f42d8c42f85c5', 'Ithwed', 'http://fiver.ir/ithwed', 1, 1, 1, 1);
+INSERT INTO `settings` (`id`, `contact_email`, `skype`, `phone1`, `phone2`, `phone3`, `address`, `flutterwave_key`, `flutterwave_secret`, `currency_code`, `currency_sign`, `maintenance_mode`, `created_at`, `updated_at`, `paypalKey`, `paypalSecret`, `paystackkey`, `paystackSecret`, `sitename`, `sitelink`, `is_rating_auto_approve`, `is_listing_auto_approve`, `is_vendor_account_auto_approve`, `is_couple_account_auto_approve`, `is_listing_comment_approved`) VALUES
+(1, 'info@itheewed.com.ng', NULL, '+234-812-834-0493', '+234-812-834-0493', '+234-812-834-0493', '23 Kunle Ogunba St, Lekki Phase I  100263, Lagos, Nigeria', 'FLWPUBK_TEST-54dafcfc4d1439dbeddafa1d68a4f63b-X', 'FLWSECK_TEST-f918939659bd03f568fa7db85f2e6ae9-X', 'NGN', '₦', 0, NULL, '2022-04-27 10:29:20', 'AZL4dLjYas-gQoZZgXzWu_7DL9fFDMiqHNqLF9SJCNcnRYKf1mUdM3lqNg57-eqHzLzsTGsuyXEUrBv5', 'ECAWWPJCiBrimoFSJm6pMvFlGrxxT7PuudKA92Fn9aJt8MZa96xP3tstpelgmd7dOlOe60cPwWorb8gc', 'pk_test_6bf927c4fcf4172fae59cf27c7b7688853682f74', 'sk_test_413bcc87331a629a73514f44258f42d8c42f85c5', 'Ithwed', 'http://fiver.ir/ithwed', 1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1110,6 +1155,12 @@ ALTER TABLE `listings`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `listing_comments`
+--
+ALTER TABLE `listing_comments`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
@@ -1179,6 +1230,12 @@ ALTER TABLE `personal_access_tokens`
 -- Indexes for table `ratings`
 --
 ALTER TABLE `ratings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `react_listing_comments`
+--
+ALTER TABLE `react_listing_comments`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1259,10 +1316,16 @@ ALTER TABLE `listings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
+-- AUTO_INCREMENT for table `listing_comments`
+--
+ALTER TABLE `listing_comments`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `oauth_clients`
@@ -1298,7 +1361,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `ratings`
 --
 ALTER TABLE `ratings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `react_listing_comments`
+--
+ALTER TABLE `react_listing_comments`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `settings`
