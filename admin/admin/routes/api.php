@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\ListingController;
 use App\Http\Controllers\API\VendorController;
 use App\Http\Controllers\API\SettingsController;
-
+use App\Http\Controllers\API\WebsiteController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -61,4 +61,12 @@ Route::middleware('auth:api')->group(function () {
     Route::get('user/flag/{id?}/{status?}',[VendorController::class,'flag']);
     Route::get('/user/delete/{id?}',[VendorController::class,'delete']);
 
+
+    // TEMPLATES
+
+    Route::post('/template/create',[WebsiteController::class, 'create']);
+    Route::post('/template/update',[WebsiteController::class, 'update']);
+    Route::get('/template/delete/{id?}',[WebsiteController::class, 'delete']);
+    Route::get('/template/byIid/{id?}',[WebsiteController::class,'getById']);
+    Route::get('/template/showall',[WebsiteController::class,'showAll']);
 });

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 09, 2022 at 09:48 PM
+-- Generation Time: Jun 22, 2022 at 08:19 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -154,6 +154,39 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `guestlists`
+--
+
+CREATE TABLE `guestlists` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `firstname` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lastname` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gender` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `age_preference` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `group_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `relationship` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `guestlists`
+--
+
+INSERT INTO `guestlists` (`id`, `firstname`, `lastname`, `gender`, `age_preference`, `group_name`, `phone`, `status`, `email`, `created_at`, `updated_at`, `user_id`, `relationship`) VALUES
+(1, 'Peter', 'Effiong', 'm', 'a', 'Bride\'s Family', NULL, '0', 'petereff@gmail.com', '2022-06-14 08:50:07', '2022-06-14 08:50:07', '17', 'Groom\'s Brother'),
+(2, 'Peter', 'Effiong', 'm', 'a', 'Bride\'s Family', NULL, '0', 'petereff@gmail.com', '2022-06-14 09:14:45', '2022-06-14 09:14:45', '17', NULL),
+(3, 'Peter', 'Effiong', 'm', 'a', 'Groom\'s Family', NULL, '0', 'petereff@gmail.com', '2022-06-14 09:15:20', '2022-06-14 09:15:20', '17', NULL),
+(4, 'Peter', 'Effiong', 'm', 'a', 'Groom\'s Family', '09099309949', '0', 'petereff@gmail.com', '2022-06-14 09:15:37', '2022-06-14 09:15:37', '17', NULL),
+(6, 'Peter', 'Effiong', 'm', 'c', 'Groom\'s Family', '09099309949', '1', 'petereff@gmail.com', '2022-06-14 10:56:35', '2022-06-14 11:16:32', '17', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `listings`
 --
 
@@ -256,7 +289,33 @@ INSERT INTO `listings` (`id`, `title`, `cat_id`, `user_id`, `address`, `price`, 
 (73, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-03 21:26:41', '2022-06-09 12:02:40', 0, 0, 0, 1),
 (74, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-06 03:53:15', '2022-06-09 12:02:40', 0, 0, 0, 1),
 (75, 'Cake 14', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '4', 'cake', '[]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-06 03:53:48', '2022-06-09 12:02:40', 0, 0, 0, 1),
-(76, 'Good Baby', '21', '9', 'No 2, Omolola estate.', '15000', 'Lagos', 'Lagos', 'South', 'Nigeria', '0', 'The best service and support you want to assure', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-06-08 07:49:44', '2022-06-09 12:02:40', 0, 0, 0, 1);
+(76, 'Good Baby', '21', '9', 'No 2, Omolola estate.', '15000', 'Lagos', 'Lagos', 'South', 'Nigeria', '0', 'The best service and support you want to assure', '[]', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '2022-06-08 07:49:44', '2022-06-09 12:02:40', 0, 0, 0, 1),
+(77, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"kX6a\":\"cake5jpegHhktft6dMx1tjwwRflKuNod3gFyTcBdcQeIQ3n1e.jpeg\"},{\"48Zr\":\"cake4jpeg4ZCjH6qU6OYGK6Moz39H9N2VpA6lS4QFSo3VpknJ.jpeg\"},{\"5le4\":\"cake3jpeg14PrYk2Vs1lGcvF9aK9bZbeaZy4UOPQd2QYYFsxM.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 03:44:33', '2022-06-13 03:44:33', 0, 0, 0, 1),
+(78, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"6xbk\":\"cake5jpegmeUun85l4zbnDiLPY6pR5urF7gy8ibgkTRv9sLKX.jpeg\"},{\"fIcq\":\"cake4jpeg9n9djGWQsw1TDReEbrdU4U1alVX76BLlVITsZoav.jpeg\"},{\"avSM\":\"cake3jpegxtcOb3Cuc1eRBo5FK5HHHcoV1BHM5Bf58z3j1z01.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 03:44:33', '2022-06-13 03:44:33', 0, 0, 0, 0),
+(79, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"kKNt\":\"cake5jpegHnYGlIXjXPtxPRrdWZWD7TbC4BqeYADFxz6I5DMA.jpeg\"},{\"L7qx\":\"cake4jpegTjZTGcj48iI4ORNgQjEpYmPYA2UDE04MYChkCaFc.jpeg\"},{\"ULBP\":\"cake3jpegWBWeux4M3NNw7P2PDVV1ie6loe1F26gKTSrkS4Yc.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:01:31', '2022-06-13 04:01:31', 0, 0, 0, 0),
+(80, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"NRQF\":\"cake5jpegVwzjOxJLfzjaf3Uaa4AFGD6xOFYb8i9oFnSxsCjH.jpeg\"},{\"hnzo\":\"cake4jpegSVAgcT4mZqfRQWnrnfGRwVrBBwcXZUS5yKhrCsJW.jpeg\"},{\"sMQX\":\"cake3jpeg8Kpoe9DF2LVDTWGbbphWUaRtY66oaWQajouqmak3.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:02:11', '2022-06-13 04:02:11', 0, 0, 0, 0),
+(81, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"B19N\":\"cake5jpegmsKmdoLdCaRQIT09p2OLrGCQVpG8f6u3p8I9cNoy.jpeg\"},{\"aTBT\":\"cake4jpegq41yjNWxB9gJidxDkNdIh7pn3e7tA8Ck4R56PSpR.jpeg\"},{\"iuCB\":\"cake3jpeglBlvls3MRwqZNV4jR6dVdEXXDn0pwwPWE9rtgWJ3.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:03:22', '2022-06-13 04:03:22', 0, 0, 0, 0),
+(82, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"Nboe\":\"cake5jpegsiZcjthVG3hvmBaE5LZCxlJhGcNWmnEAFCmkTPPz.jpeg\"},{\"4a7G\":\"cake4jpegwC2uXef88WoWWMCCZvVpuhGa0fSFRUkTVHWiSaPT.jpeg\"},{\"Hf6S\":\"cake3jpeglSrdEmfVnY4JVlGW6zVbJcdziZAhPMT1ZNdkjZ1T.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:03:54', '2022-06-13 04:03:54', 0, 0, 0, 0),
+(83, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"T0RJ\":\"cake5jpeg5A3a1Xg1FwqfQBRGCYLsA5zeXB6eaN2VFJ7IfCeO.jpeg\"},{\"zPAa\":\"cake4jpegY99z7MM5sXBKcHgnGw7F3lFR6CpyACF6pKat9sdm.jpeg\"},{\"0ujf\":\"cake3jpegWoUintFoiRGxnS8OqId3UNl30mTFOzRkWQ3w8CxH.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:03:57', '2022-06-13 04:03:57', 0, 0, 0, 0),
+(84, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"OJqM\":\"cake5jpegizwvOA8ibHT5aEOxe7rF6cUwVx3Ej4pK7f1ADCin.jpeg\"},{\"IiDA\":\"cake4jpegyLYj95PNsnStoBaE9d6N3x5e2dIkXeJowSMrdpdo.jpeg\"},{\"OQ1Q\":\"cake3jpegEvR4PkkiGQy53JiCRCVO1YYbnSciHjzyj5uPhJLU.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:07:50', '2022-06-13 04:07:50', 0, 0, 0, 0),
+(85, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"OI1U\":\"cake5jpeg3y1c0DazzCAlcqMt3MD51Y5GVhapkAMKAqpueU3R.jpeg\"},{\"mqc1\":\"cake4jpegkptZe6CGWkIHgMch3x5M0u6tixb5IyCsuwCyfsak.jpeg\"},{\"GCPb\":\"cake3jpegUw12RyDPnBIQ6klYSlQ9TbGdmIx1k8exD4615mAQ.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:07:53', '2022-06-13 04:07:53', 0, 0, 0, 0),
+(86, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"MDZi\":\"cake5jpegqwWB7fUCMb9Q1UP9HTYipk3ipurysE4uRlM9P2yU.jpeg\"},{\"W3w4\":\"cake4jpeg4LvsIY9Ei8cZ9U9jY44x9RKhO5Owp17X6a3v4fMw.jpeg\"},{\"Mpns\":\"cake3jpegTslC2NGcHqEvZ5easwNprAx2vtd8MlaOKe8xubkC.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:08:32', '2022-06-13 04:08:32', 0, 0, 0, 0),
+(87, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"S05g\":\"cake5jpegKm5e31LzM708ZpGtEEwlloLzQRFMn1y0WTFVpFNL.jpeg\"},{\"5gjF\":\"cake4jpegSqKdLMmnhXuKAG5U9vZxb9LYDTaaWOGt3Ne0Y314.jpeg\"},{\"cPwh\":\"cake3jpegZJmjLPNIUsxa0WNYJzMD32MxcaQM1Vosn7okj7Pe.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:11:25', '2022-06-13 04:11:25', 0, 0, 0, 0),
+(88, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"Si0T\":\"cake5jpegbwUw6alUDF09uI9fr0FsO3knrQ0TERuJdZKDUbOQ.jpeg\"},{\"M1uA\":\"cake4jpeg0JZdBpZrxSX8vawRDelyu5PmByYfq4ahafCVBhzV.jpeg\"},{\"l4Gx\":\"cake3jpegzTGlGmgebQQ0DLujxKcChFKF8c4ad3fScrnBNrM7.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:11:27', '2022-06-13 04:11:27', 0, 0, 0, 0),
+(89, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"nWFz\":\"cake5jpegZHwGKOhscTY1aSX0Cfd5BsHm75YMYYYekHxf3qU5.jpeg\"},{\"9xDz\":\"cake4jpegUehLHO5dMaaJbRz3mZdkzOeaSxpSyfzu4QV9gt4e.jpeg\"},{\"OFc6\":\"cake3jpeg4vTQCY9Gp8zYPlBTXuJMchNJPX1ecPaYSl5gNPwF.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:12:11', '2022-06-13 04:12:11', 0, 0, 0, 0),
+(90, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"6K9d\":\"cake5jpeg1OcXGTIUa2yc3d1bPWEzLaiWhTCtsej8OG1b5qOM.jpeg\"},{\"7069\":\"cake4jpegCse8u6z6Pw7dnm22KCD5f5QcfeUu0JGktFJ2NDef.jpeg\"},{\"Cj3e\":\"cake3jpegnzToPTTpSNsK6FLyd1VwhgyxlWhmt4uuCaKXFxOr.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:12:13', '2022-06-13 04:12:13', 0, 0, 0, 0),
+(91, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"gaVb\":\"cake5jpeg0K8XvjYgjVfOF8M9CrmYjAO5E7lkiTYkzWfjqsGn.jpeg\"},{\"vBw2\":\"cake4jpeganQDn9H0B7qL1kcD96uFbRypbtNPgn09uBBjKui6.jpeg\"},{\"xewy\":\"cake3jpegYVyF9TijX1VOXjbbPcmEBv6glvqwJt7MsX4H6Wwh.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:12:47', '2022-06-13 04:12:47', 0, 0, 0, 0),
+(92, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"OfX2\":\"cake5jpegOcn2AfjR9xCSHYT3Ene8A9mh0jAZCNcoVOEaE6P2.jpeg\"},{\"JS8W\":\"cake4jpegPVefa8aytj8HfEaZf08q5RIP0yOLieBRpMlIGvbm.jpeg\"},{\"GZea\":\"cake3jpeg1Xed2kwyN9Y5uf0pxiBAwyaWu1H2OSQbysTONCI0.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:12:50', '2022-06-13 04:12:50', 0, 0, 0, 0),
+(93, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"kRWx\":\"cake5jpegd1l6xebPsqs8VokgEMIcBlhozN0Sdc2g55MkRlVs.jpeg\"},{\"leS3\":\"cake4jpeghkceIV1opfZ6cHdmIQpxjTPtmOPev8sRDP0pebpk.jpeg\"},{\"D4s3\":\"cake3jpegUliSb1IfgyEotjoN9PCiU1fyqoHKncrLNDbIDXbL.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:13:14', '2022-06-13 04:13:14', 0, 0, 0, 0),
+(94, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"JHtX\":\"cake5jpegCZKdgIq1GFMhnCmaK8eRvnq0tZDfPZW0QnUG15Ez.jpeg\"},{\"AhZu\":\"cake4jpegm0F7REgba6pvVCXxSy6TkXNCFD2V0b2hmQ94L1s8.jpeg\"},{\"UcMC\":\"cake3jpeghhbzNfSxpWrK8HFozjmopxKycVv0RWQppWzuzUvh.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:13:23', '2022-06-13 04:13:23', 0, 0, 0, 0),
+(95, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"qr6a\":\"cake5jpeg879kXysW2rqTXl0rJWXkNlO0j23zZwHEdBozbAKn.jpeg\"},{\"XCTP\":\"cake4jpega6T6LgDpgoGxQ3ubgAJXJNwNnWBDJWjBr7GOHfT8.jpeg\"},{\"5R0y\":\"cake3jpegYP5NsqSSRbvZWl7Y5FIhl1rPbF7SWtJd6Zt9wacI.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:15:47', '2022-06-13 04:15:47', 0, 0, 0, 0),
+(96, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"BGWD\":\"cake5jpegLLKcjsgfEU6vAKwm4e3ADYx9bT70fKPve2lrFEEw.jpeg\"},{\"IpO3\":\"cake4jpegyA17dulkVYQJzcQGavgKYOh6cbA8knwjPtLamIDr.jpeg\"},{\"YKKQ\":\"cake3jpegwog0KQwZ3cjZuCbJnyXC97duUbqrCFQVk7bQ08Ve.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:17:46', '2022-06-13 04:17:46', 0, 0, 0, 0),
+(97, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"TxMt\":\"cake5jpegwzZK6hp6vFX6g0rvflmfh7apAqfWpIh6ahNBjokz.jpeg\"},{\"wxli\":\"cake4jpegBRsxCbIOlxHnze8OhlevVoIRRxu9dGJkZ0nTjjiQ.jpeg\"},{\"JzCR\":\"cake3jpegCaDyZ7XjFqryOTj2lfR6r82JAxKPOSrzsfyZs3zG.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:17:48', '2022-06-13 04:17:48', 0, 0, 0, 0),
+(98, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"rhnD\":\"cake5jpegiiYRTiEqvFhAlF8DEE5xi8FphthhrxDzglQHSii3.jpeg\"},{\"nnXY\":\"cake4jpegAwXusX4ld9kLVcRpOzcHXFDN0OuBaav5IBmZf5Mh.jpeg\"},{\"Vq3U\":\"cake3jpegAGeltnPDq0PSBE6SDPmvQeeKOgxvNCbYZ1RKZzb5.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:18:14', '2022-06-13 04:18:14', 0, 0, 0, 0),
+(99, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"HCWl\":\"cake5jpeg1W3DbK3LkgYwm7DwMIQaw3oZzmUeYDtVVqeJ5o8I.jpeg\"},{\"uCkZ\":\"cake4jpegH5OQYFuzLrbTxAOnbdWdNbfShT0x7xONsFNy0UFK.jpeg\"},{\"TOab\":\"cake3jpegxrp4k4OLe6otjNb5Uo8CTAyV2oMiB12dqj5t48wY.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 04:59:01', '2022-06-13 04:59:01', 0, 0, 0, 0),
+(100, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"anlQ\":\"cake5jpegybNxRYjpP88OStlwoY4kTeGk4vUJ6rijUtWCFh2g.jpeg\"},{\"pl3f\":\"cake4jpegVNq6xpXkxqoD8aVMMZjS6LAziFjUm79Vcb14YQDD.jpeg\"},{\"fdlF\":\"cake3jpegn8MgAzhMTLSTqHrGoAlRheY81XvP8cIo475pELFK.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 05:01:09', '2022-06-13 05:01:09', 0, 0, 0, 0),
+(101, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"BcKn\":\"cake5jpegMmjzMbwnEuVvNKiAumP37ClXaDx9iVYy2RTEAoAm.jpeg\"},{\"HmlW\":\"cake4jpegPhpYsg36rty82NxdGiR3aWrmBJA2KA7kwHL7lKRx.jpeg\"},{\"6R77\":\"cake3jpegSXt32l81Q1FkCDdjajC79bWgQPbMwcXzNak6OgtE.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 05:01:40', '2022-06-13 05:01:40', 0, 0, 0, 0),
+(102, 'Cake', '21', '9', '12 Ibiam street Uyo', '2000', 'uyo', 'Akwa Ibom', 'south south', 'Nigeria', '0', 'cake', '[{\"knre\":\"cake5jpegxFoyqqUpSLftvV4ZWCWwXpj72egMjnBgEJzEanZw.jpeg\"},{\"Jkc4\":\"cake4jpegYbbM0JBlTD3E0ITg9QeWHfw2YgApROZ437jMUQGI.jpeg\"},{\"dqwk\":\"cake3jpegP7fLalKxbkWk0JHrP9zzci4YsiK0Vh9iWFTr6zwV.jpeg\"}]', '[]', '112.32', '2233.45', NULL, NULL, NULL, NULL, '2022-06-13 05:01:42', '2022-06-13 05:01:42', 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -349,7 +408,16 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (48, '2022_05_14_073618_add_gateway', 36),
 (49, '2022_06_08_202900_create_listing_comments_table', 37),
 (50, '2022_06_09_001629_add_comment_is_auto_aapprove', 38),
-(51, '2022_06_09_062043_create_react_listing_comments_table', 39);
+(51, '2022_06_09_062043_create_react_listing_comments_table', 39),
+(52, '2022_06_14_005257_create_guestlists_table', 40),
+(53, '2022_06_14_093424_add_user_id_table_guestlist', 41),
+(54, '2022_06_19_192135_create_w_e_d_homes_table', 42),
+(55, '2022_06_19_192238_create_w_e_d_stories_table', 42),
+(56, '2022_06_19_192402_create_w_e_d_galleries_table', 42),
+(57, '2022_06_19_192427_create_w_e_d_questions_table', 42),
+(58, '2022_06_20_145354_create_templates_table', 43),
+(59, '2022_06_21_011806_add_title_to_stories', 44),
+(60, '2022_06_21_140829_create_used_templates_table', 45);
 
 -- --------------------------------------------------------
 
@@ -420,6 +488,7 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('2505a1b5a836d7e236c25bb01534b4d83ca8505b228e094e3d18adf308234fa4e33c25e5a8034c84', 9, 10, 'ithwedapp', '[]', 0, '2022-05-21 15:35:56', '2022-05-21 15:35:56', '2023-05-21 11:35:56'),
 ('2564a4d18317e7e9ca90a40e7a969b4c475f0eb2fd855a9ded3f06fedcbc655274528d3075de9252', 14, 10, 'ithwedapp', '[]', 0, '2022-06-04 21:46:22', '2022-06-04 21:46:22', '2023-06-04 17:46:22'),
 ('256dcd29581fdb817872195539bf7e465e3f5b0c116a7e9a01414e56a269759f8e7d4120174fba63', 9, 10, 'ithwedapp', '[]', 0, '2022-05-21 15:39:00', '2022-05-21 15:39:00', '2023-05-21 11:39:00'),
+('2760c94a3592a59cbabbf37b0f9b4b16adca5f09971fc89d951c92c68515c8c110bb97aa9a578cf6', 14, 10, 'ithwedapp', '[]', 0, '2022-06-20 19:38:25', '2022-06-20 19:38:25', '2023-06-20 20:38:25'),
 ('27a749b4edccc8380d33f177a9ae66d2c28d368fd04345a853ad73d5d4028e6a0ad2a8d80a10ae50', 9, 10, 'ithwedapp', '[]', 0, '2022-05-26 04:25:36', '2022-05-26 04:25:36', '2023-05-26 00:25:36'),
 ('2bf506b55f026bed0ac1f5c46dbf28bb94e247071c1e803b68be1c7e4467069c6bcc91362e83761d', 9, 10, 'ithwedapp', '[]', 0, '2022-05-21 16:37:06', '2022-05-21 16:37:06', '2023-05-21 12:37:06'),
 ('2c5c21223cd093d209e7d5d5cf209990e08b8b80f6330dded125158ba2ee29b5a0f317ff265e87b1', 9, 10, 'ithwedapp', '[]', 0, '2022-05-31 19:01:32', '2022-05-31 19:01:32', '2023-05-31 15:01:32'),
@@ -508,6 +577,7 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('7625c4c7d36a5933743f2733192534d73d8340c487a06d691947674aea33b5fcd7825863521584f2', 32, 10, 'ithwedapp', '[]', 0, '2022-05-26 03:46:51', '2022-05-26 03:46:51', '2023-05-25 23:46:51'),
 ('7796b337865c467d0a90d76a648d16a17eac6827e4df18c1c3fb8b73b2658192c9d7e9cad64fe03a', 28, 10, 'authToken', '[]', 0, '2022-05-23 19:27:43', '2022-05-23 19:27:43', '2023-05-23 15:27:43'),
 ('7798640446c6c2ed1133a3e89699e06d5aa9f46d0b67d0e192cf71589ea0161791eb17dd24d6bc8e', 34, 10, 'ithwedapp', '[]', 0, '2022-05-30 13:21:15', '2022-05-30 13:21:15', '2023-05-30 09:21:15'),
+('77f911f2226c4022707e9ff3f353c7e0ab0a5f4978ec82c303a9fa058d211a44e2587ebb05bf6080', 2, 10, 'admin', '[]', 0, '2022-06-20 17:16:29', '2022-06-20 17:16:29', '2023-06-20 18:16:29'),
 ('78ba8544e536ca8a5f164bfe217830a2003fa56a68f67a4cd6198558b4d80cc27ee68d7aed387e7f', 45, 10, 'authToken', '[]', 0, '2022-06-01 21:06:40', '2022-06-01 21:06:40', '2023-06-01 17:06:40'),
 ('78c5c7d564e71140558bc9fca388b15d9d07dd85932cf5491533655573be68625092fa66db39ad74', 14, 10, 'ithwedapp', '[]', 0, '2022-05-25 18:56:39', '2022-05-25 18:56:39', '2023-05-25 14:56:39'),
 ('79ff5d2dc44a0112c0e46082b2c7e6bcbfd77ac570dbbeeff3de1136422dced2dc4f906460d664f2', 9, 10, 'ithwedapp', '[]', 0, '2022-05-24 07:56:13', '2022-05-24 07:56:13', '2023-05-24 03:56:13'),
@@ -573,6 +643,7 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('b377ec970eaa54017926691286c515e1085ba2ca9643403a88a4694896325e8aa1973d218738c620', 14, 10, 'ithwedapp', '[]', 0, '2022-06-01 02:28:15', '2022-06-01 02:28:15', '2023-05-31 22:28:15'),
 ('b3ca145882fbaacdbbeace5ab4cf93131ba4db020f93dc553abd28e1b01bc02e05d23b8646882f4c', 36, 10, 'ithwedapp', '[]', 0, '2022-05-30 15:11:14', '2022-05-30 15:11:14', '2023-05-30 11:11:14'),
 ('b46c12cb5dce7403953c8cd1ce669fa5c3e33425eafb2e2872a359d96cdabe515c5089eb05af1c0b', 4, 1, 'authToken', '[]', 0, '2022-04-14 07:18:05', '2022-04-14 07:18:05', '2023-04-14 08:18:05'),
+('b4a7fbd8ed9ea33dd7995e45514a55ef1a854b0f07985857fb0aec0ca606ddf8b63d005871e07221', 9, 10, 'ithwedapp', '[]', 0, '2022-06-13 05:16:34', '2022-06-13 05:16:34', '2023-06-13 06:16:34'),
 ('b681edbc2fc9826000152db08745fabc8086fe5b3a846e08f0ad324838fa94cddc3f59b1c9447598', 14, 10, 'ithwedapp', '[]', 0, '2022-06-01 02:41:29', '2022-06-01 02:41:29', '2023-05-31 22:41:29'),
 ('b8631e37bb2f63293d500c299be0088bdf2740904373394866e03306b404a268c365c8d3ca5861ef', 14, 10, 'ithwedapp', '[]', 0, '2022-05-26 17:38:17', '2022-05-26 17:38:17', '2023-05-26 13:38:17'),
 ('b8e6e23f81c64dd087f6983b0a9df0542e6daefd494847a4ccda0c491112474eef0430d44b89caee', 14, 10, 'ithwedapp', '[]', 0, '2022-06-01 02:53:50', '2022-06-01 02:53:50', '2023-05-31 22:53:50'),
@@ -643,11 +714,11 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('f1bae85d925a32b3c7698f91594c3534a27e508b778313dc21dc58a841a4a3d6f20c847708d48862', 2, 10, 'admin', '[]', 0, '2022-04-20 19:49:27', '2022-04-20 19:49:27', '2023-04-20 20:49:27'),
 ('f1e3d6677e0090bdb3c5fb631e4a8493e92c93e65969106d3796cc15aa281b13597dcc40da19fdd1', 34, 10, 'ithwedapp', '[]', 0, '2022-06-03 05:14:21', '2022-06-03 05:14:21', '2023-06-03 01:14:21'),
 ('f2a63549e62d38e351fa6a8d4caed7a20ab76412eab3820ebe846643cd76829e547b638ea06149bc', 38, 10, 'ithwedapp', '[]', 0, '2022-06-02 08:41:32', '2022-06-02 08:41:32', '2023-06-02 04:41:32'),
-('f42d0a194005c4e1be78ee48bdadf65afb33e02289a9b4f347ef65c0a77bb06d2d1ce313b8f5dfcc', 34, 10, 'ithwedapp', '[]', 0, '2022-05-30 14:14:48', '2022-05-30 14:14:48', '2023-05-30 10:14:48'),
+('f42d0a194005c4e1be78ee48bdadf65afb33e02289a9b4f347ef65c0a77bb06d2d1ce313b8f5dfcc', 34, 10, 'ithwedapp', '[]', 0, '2022-05-30 14:14:48', '2022-05-30 14:14:48', '2023-05-30 10:14:48');
+INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`) VALUES
 ('f4608f7263f4a5af77d6b02830cff1779dd08b50925eada4944ffc360faa9a5faa8b4438371edd3b', 34, 10, 'ithwedapp', '[]', 0, '2022-05-30 12:24:18', '2022-05-30 12:24:18', '2023-05-30 08:24:18'),
 ('f4ffce5efe67d8c1d241ca2c1fca6c532877f7b5e32e53173109bdf6632c0bbd22a062f98f0180e6', 9, 10, 'ithwedapp', '[]', 0, '2022-05-25 08:36:17', '2022-05-25 08:36:17', '2023-05-25 04:36:17'),
-('f52156d9213589bfe9646ac2f97f397f469d003f27d414779df9b11867a32671474b0f8b26fa770d', 34, 10, 'ithwedapp', '[]', 0, '2022-05-31 20:42:45', '2022-05-31 20:42:45', '2023-05-31 16:42:45');
-INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`) VALUES
+('f52156d9213589bfe9646ac2f97f397f469d003f27d414779df9b11867a32671474b0f8b26fa770d', 34, 10, 'ithwedapp', '[]', 0, '2022-05-31 20:42:45', '2022-05-31 20:42:45', '2023-05-31 16:42:45'),
 ('f572d8892aab6838a420062f96f21f4387ecb41b1e305c5fd9d64941b2f114f3f2e0ac2da637d0b1', 20, 10, 'ithwedapp', '[]', 0, '2022-05-21 17:08:02', '2022-05-21 17:08:02', '2023-05-21 13:08:02'),
 ('f601a6856efef1254f6274b7bb07357e66761390efcea3c9b4a0daf96223a20dc41838b0113d5733', 9, 10, 'ithwedapp', '[]', 0, '2022-05-22 00:10:54', '2022-05-22 00:10:54', '2023-05-21 20:10:54'),
 ('f683c977a1037c0c0acf9442ffd5b66355f8340b2376ebccf5b35a4aef7a4ad3e336808f59af81ea', 34, 10, 'ithwedapp', '[]', 0, '2022-06-04 22:19:56', '2022-06-04 22:19:56', '2023-06-04 18:19:56'),
@@ -852,7 +923,9 @@ INSERT INTO `ratings` (`id`, `user_id`, `type`, `rating_no`, `listing_id`, `stat
 (8, '9', NULL, '5', '8', '0', '2022-05-13 06:44:13', '2022-06-08 19:24:16', 'This is the best service ever'),
 (9, '9', NULL, '5', '8', '0', '2022-05-13 10:07:22', '2022-05-13 10:07:22', 'This is the best service ever'),
 (11, '9', NULL, '5', '8', '1', '2022-05-13 10:12:33', '2022-05-13 10:12:33', 'This is the best service ever'),
-(12, '9', NULL, '5', '8', '1', '2022-06-08 18:59:33', '2022-06-08 18:59:33', 'This is the best service ever');
+(12, '9', NULL, '5', '8', '1', '2022-06-08 18:59:33', '2022-06-08 18:59:33', 'This is the best service ever'),
+(13, '27', NULL, '5', '77', '1', '2022-06-08 18:59:33', '2022-06-08 18:59:33', 'This is the best service ever'),
+(14, '28', NULL, '4', '77', '1', '2022-06-08 18:59:33', '2022-06-08 18:59:33', 'This is the best service ever');
 
 -- --------------------------------------------------------
 
@@ -971,6 +1044,41 @@ INSERT INTO `task_models` (`id`, `user_id`, `task_name`, `task_date`, `is_comple
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `templates`
+--
+
+CREATE TABLE `templates` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `home` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gallery` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `story` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `questions` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `home_code_mobile` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gallery_code_mobile` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `story_code_mobile` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `questions_code_mobile` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `home_code_desktop` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gallery_code_desktop` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `story_code_desktop` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `questions_code_desktop` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `templates`
+--
+
+INSERT INTO `templates` (`id`, `name`, `home`, `gallery`, `story`, `questions`, `description`, `home_code_mobile`, `gallery_code_mobile`, `story_code_mobile`, `questions_code_mobile`, `home_code_desktop`, `gallery_code_desktop`, `story_code_desktop`, `questions_code_desktop`, `created_at`, `updated_at`) VALUES
+(2, 'Aye Wedding', 'Wyg5YhdL6YxnhJL5Bab65axlymJdeGPI9n4p59P81592850359.png', '', '', '', 'Aye responsive template', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-06-20 17:25:59', '2022-06-20 17:39:43'),
+(3, 'Aye Wedding', '1gK97GzV6fW2lOJU05Kvsv8fBT6mOjshP6SnMLY71592850831.png', '', '', '', 'Aye responsive template', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-06-20 17:33:51', '2022-06-20 17:33:51'),
+(4, 'Aye Wedding', 'pDcZPN5DhKf6y3PnDMysFk7GJu685ls4kTvs2SdO1592850832.png', '', '', '', 'Aye responsive template', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-06-20 17:33:52', '2022-06-20 17:33:52');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `transactions`
 --
 
@@ -994,7 +1102,28 @@ CREATE TABLE `transactions` (
 --
 
 INSERT INTO `transactions` (`id`, `user_id`, `sub_id`, `unit`, `amount`, `txn_id`, `sub_count`, `created_at`, `updated_at`, `next_due_date`, `sub_date`, `gateway`) VALUES
-(2, '9', '4', '447', '300', '', 1, '2022-05-14 08:59:00', '2022-06-08 07:49:44', '2022-08-14 09:59:00', '2022-05-14 09:59:00', 'flutterwave');
+(2, '9', '4', '422', '300', '', 1, '2022-05-14 08:59:00', '2022-06-13 05:01:42', '2022-08-14 09:59:00', '2022-05-14 09:59:00', 'flutterwave');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `used_templates`
+--
+
+CREATE TABLE `used_templates` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `template` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `used_templates`
+--
+
+INSERT INTO `used_templates` (`id`, `user_id`, `template`, `created_at`, `updated_at`) VALUES
+(1, '17', '3', '2022-06-21 14:21:05', '2022-06-21 14:22:20');
 
 -- --------------------------------------------------------
 
@@ -1049,12 +1178,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `is_vendor`, `is_couple`, `country`, `country_code`, `vendor_name`, `facebook`, `twitter`, `youtube`, `instagram`, `whatsapp`, `language`, `status`, `description`, `avatar`, `phone`, `is_phone_verified`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `token`, `username`, `vendor_banner`, `vendor_address`, `vendor_type`, `state`, `firstname`, `lastname`, `is_flagged`, `is_verified`, `plan_id`, `trans_id`, `next_due_date`, `sub_date`, `is_active`, `sub_count`) VALUES
-(9, 'pachristo@gmail.com', 1, 0, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '07088800874', NULL, NULL, '$2y$10$SuEos4euvEsGxLwGnc.5seqtTRVqPc9VxvioKLFb7wwfz9AlGFoOi', NULL, '2022-04-14 15:20:24', '2022-05-14 08:59:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, '4', '2', '2022-08-14 09:59:00', '2022-05-14 09:59:00', 1, 1),
+(9, 'pachristo@gmail.com', 1, 0, 'Nigeria', '234', 'Flower Factory', NULL, NULL, NULL, NULL, '0909999933', 'English', NULL, 'flower industry', 'cake3jpegs2Yol9uWACPRNNbDnoIbhwhbNIfJwOX7tL1pnrAp.jpeg', '09088878737', NULL, NULL, '$2y$10$SuEos4euvEsGxLwGnc.5seqtTRVqPc9VxvioKLFb7wwfz9AlGFoOi', NULL, '2022-04-14 15:20:24', '2022-06-13 23:17:47', NULL, NULL, 'cake_and_dessertpngCA9DZ7tiKzdRzwHrO5vYJpFYKespfF7sYkfI2eEk.png', '12 Abak rd uyo', 'Baking', 'Akwa Ibom', NULL, NULL, 0, 0, '4', '2', '2022-08-14 09:59:00', '2022-05-14 09:59:00', 1, 1),
 (11, 'chiomaflourltd@gmail.com', 1, 0, NULL, NULL, 'Chioma Flourist Ltd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '+23566588855', NULL, NULL, '$2y$10$9iC8fEQOhPXiEHyojcs4b.QTetvDvwy.8Dk8d.gXgjvSOMYNVCYjK', NULL, '2022-04-14 15:29:58', '2022-04-14 15:29:58', NULL, NULL, NULL, '12 Abak Rd , Uyo Akwa Ibom', NULL, NULL, NULL, NULL, 0, 0, '', NULL, NULL, NULL, 0, 0),
 (14, 'peakntf@gmail.com', 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '234877885588', NULL, NULL, '$2y$10$MSLs9SwQ0xKEiaOT9TdgWecD4gIKlRAzpqxjzjD5lzIrchrjxYk9O', NULL, '2022-04-14 16:33:29', '2022-04-14 16:33:29', NULL, 'pachristo', NULL, NULL, NULL, NULL, 'Christian', 'Umanah', 0, 0, '', NULL, NULL, NULL, 0, 0),
 (15, 'chiomvendorltd@gmail.com', 1, 0, NULL, NULL, 'Chioma Flourist Ltd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '+23566588855', NULL, NULL, '$2y$10$RAQqI7GQqldjpZZuu8S7YeqJ6QkYYgUHwaaPH/Ol/9BQ69O/hgYMu', NULL, '2022-04-22 18:41:31', '2022-05-21 18:08:48', NULL, NULL, NULL, '12 Abak Rd , Uyo Akwa Ibom', NULL, NULL, NULL, NULL, 1, 0, '', NULL, NULL, NULL, 0, 0),
 (16, 'peakcouple@gmail.com', 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '234877885588', NULL, NULL, '$2y$10$on3K3DlwlALjBcvmkoOLq.ooMNID/xjNUW7nU4x2.u6OMGAqxhpae', NULL, '2022-04-23 06:17:09', '2022-04-23 06:17:09', NULL, 'peakcouple', NULL, NULL, NULL, NULL, 'Christian', 'Umanah', 0, 0, '', NULL, NULL, NULL, 0, 0),
-(17, 'peakdone@gmail.com', 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '234877885588', NULL, NULL, '$2y$10$sUnEarj38kGi4xQ4MIvUxuyhGQVDukSMXWHqbBxOztmp4OmqDRrje', NULL, '2022-05-19 14:04:13', '2022-05-19 14:04:13', '6125', 'peakdon', NULL, NULL, NULL, NULL, 'Christian', 'Umanah', 0, 0, NULL, NULL, NULL, NULL, 0, 0),
+(17, 'peakdone@gmail.com', 0, 1, 'Nigeria', '234', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Am peakdon by name', 'cafjpegLd2zjywAydskYrgPSELT54J7v1SwIE3YRRr3SE5I.jpeg', '09099930499', NULL, NULL, '$2y$10$sUnEarj38kGi4xQ4MIvUxuyhGQVDukSMXWHqbBxOztmp4OmqDRrje', NULL, '2022-05-19 14:04:13', '2022-06-13 23:35:44', '6125', 'peakdon', NULL, NULL, NULL, 'Akwa Ibom', 'Peakdon', 'Peter', 0, 0, NULL, NULL, NULL, NULL, 0, 0),
 (18, 'chiomaflourltd2@gmail.com', 1, 0, NULL, NULL, 'Chioma Flourist Ltd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '+23566588855', NULL, NULL, '$2y$10$FENFvnZGVvLGvlwQEWK2f.vx.y22ubLjd24dKMDkHxSCxR0tTkxWq', NULL, '2022-05-21 17:04:41', '2022-05-21 17:04:41', NULL, NULL, NULL, '12 Abak Rd , Uyo Akwa Ibom', NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
 (19, 'chiomaflourtd2@gmail.com', 1, 0, NULL, NULL, 'Chioma Flourist Ltd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '+23566588855', NULL, NULL, '$2y$10$25jR8bOyrUZTLIcItZjXfuQ5B0QYXCHiTRUDCgrJIcmUe6NOMI9Gu', NULL, '2022-05-21 17:05:42', '2022-05-21 17:05:42', NULL, NULL, NULL, '12 Abak Rd , Uyo Akwa Ibom', NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
 (20, 'chiomaflouritd2@gmail.com', 1, 0, NULL, NULL, 'Chioma Flourist Ltd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '+23566588855', NULL, NULL, '$2y$10$ShnI8vljop6vQggw6tKkT.g37eBGknpFaHoXhcV6lFYGnlsX248TG', NULL, '2022-05-21 17:05:50', '2022-05-21 17:05:50', NULL, NULL, NULL, '12 Abak Rd , Uyo Akwa Ibom', NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, 0, 0),
@@ -1113,6 +1242,102 @@ INSERT INTO `wishlists` (`id`, `listing_id`, `user_id`, `status`, `created_at`, 
 (13, '5', '9', NULL, '2022-06-03 19:16:21', '2022-06-03 19:16:21'),
 (15, '6', '9', NULL, '2022-06-03 21:12:16', '2022-06-03 21:12:16');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `w_e_d_galleries`
+--
+
+CREATE TABLE `w_e_d_galleries` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `media` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `w_e_d_galleries`
+--
+
+INSERT INTO `w_e_d_galleries` (`id`, `user_id`, `title`, `media`, `created_at`, `updated_at`) VALUES
+(3, '17', 'our weddding', '|type:image,name:nDI7RMLoPadpQDjtAJWytidfygGmy91xkA7Dsy3dACJc7Dk0t.jpeg|type:image,name:JWnXn8LcTMiyaWWaszg0VSW6VrsnJSogY9JSd6PGyzqqI8KI2.jpeg|type:image,name:cjpIrCPmi4W6h8gp9XoBHZRipPRL4bF0hp25TJb2Q79CxZdPJ.jpeg|type:video,name:ALQEeMq4WP1RBg2Zt0Y0FEojSl4kYI1MuvdlXmcRZ2XNUGUV5.mp4|', '2022-06-21 12:17:34', '2022-06-21 12:17:34');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `w_e_d_homes`
+--
+
+CREATE TABLE `w_e_d_homes` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `cover_image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `your_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `partner_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `event_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `time` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `venue` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `color` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `w_e_d_homes`
+--
+
+INSERT INTO `w_e_d_homes` (`id`, `user_id`, `cover_image`, `your_name`, `partner_name`, `event_name`, `date`, `time`, `venue`, `color`, `created_at`, `updated_at`) VALUES
+(2, '17', 'istockphoto_1300471625_170667ajpg9t6irCNLpOVYLdZKM7nWDit1EXS9KTKV9TZ9p5N7.jpg', 'Peter Oyi', 'Esther Abam', 'Wedding', '12-09-2022', '10:00am', 'Ibom Hall , Uyo', '#fffff', '2022-06-20 13:42:21', '2022-06-20 19:38:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `w_e_d_questions`
+--
+
+CREATE TABLE `w_e_d_questions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `question` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `answer` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `w_e_d_questions`
+--
+
+INSERT INTO `w_e_d_questions` (`id`, `user_id`, `question`, `answer`, `created_at`, `updated_at`) VALUES
+(4, '17', 'How we met?', 'In the School.', '2022-06-21 13:06:27', '2022-06-21 13:06:27'),
+(5, '17', 'How we met?', 'In the School.', '2022-06-21 13:06:31', '2022-06-21 13:06:31');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `w_e_d_stories`
+--
+
+CREATE TABLE `w_e_d_stories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `text` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `media` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `title` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `w_e_d_stories`
+--
+
+INSERT INTO `w_e_d_stories` (`id`, `user_id`, `text`, `media`, `created_at`, `updated_at`, `title`) VALUES
+(4, '17', 'our wedding', '|type:image,name:uwiNkmIhi0nFXTd17mygFVZRcws6w6z2EtzAPsKH8ssSZ7fFC.jpeg|type:image,name:Nr1CeeGlFcP0rOz1qiMfsjkPcvA9oJ6suQAQ2MLUu0O8PZW79.jpeg|type:image,name:pZCS1SPCaLzwF40SUmclJnSeX9QK8QpGydcQyrwoMkGxc1Kx2.jpeg|type:video,name:lirKPsCvKKYMvqg9BmbLYgwBDbcPlitBBmANqb93qcpcy8X5l.mp4|', '2022-06-21 08:51:09', '2022-06-21 08:51:09', 'our weddding');
+
 --
 -- Indexes for dumped tables
 --
@@ -1147,6 +1372,12 @@ ALTER TABLE `categories`
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indexes for table `guestlists`
+--
+ALTER TABLE `guestlists`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `listings`
@@ -1257,9 +1488,21 @@ ALTER TABLE `task_models`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `templates`
+--
+ALTER TABLE `templates`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `transactions`
 --
 ALTER TABLE `transactions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `used_templates`
+--
+ALTER TABLE `used_templates`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1273,6 +1516,30 @@ ALTER TABLE `users`
 -- Indexes for table `wishlists`
 --
 ALTER TABLE `wishlists`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `w_e_d_galleries`
+--
+ALTER TABLE `w_e_d_galleries`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `w_e_d_homes`
+--
+ALTER TABLE `w_e_d_homes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `w_e_d_questions`
+--
+ALTER TABLE `w_e_d_questions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `w_e_d_stories`
+--
+ALTER TABLE `w_e_d_stories`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1310,10 +1577,16 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `guestlists`
+--
+ALTER TABLE `guestlists`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `listings`
 --
 ALTER TABLE `listings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 
 --
 -- AUTO_INCREMENT for table `listing_comments`
@@ -1325,7 +1598,7 @@ ALTER TABLE `listing_comments`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `oauth_clients`
@@ -1361,7 +1634,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `ratings`
 --
 ALTER TABLE `ratings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `react_listing_comments`
@@ -1388,10 +1661,22 @@ ALTER TABLE `task_models`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT for table `templates`
+--
+ALTER TABLE `templates`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `used_templates`
+--
+ALTER TABLE `used_templates`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -1404,6 +1689,30 @@ ALTER TABLE `users`
 --
 ALTER TABLE `wishlists`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `w_e_d_galleries`
+--
+ALTER TABLE `w_e_d_galleries`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `w_e_d_homes`
+--
+ALTER TABLE `w_e_d_homes`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `w_e_d_questions`
+--
+ALTER TABLE `w_e_d_questions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `w_e_d_stories`
+--
+ALTER TABLE `w_e_d_stories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
