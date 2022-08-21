@@ -60,6 +60,10 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/createCouple',[VendorController::class,'couple_register']);
     Route::get('user/flag/{id?}/{status?}',[VendorController::class,'flag']);
     Route::get('/user/delete/{id?}',[VendorController::class,'delete']);
+    // Route::get('/allVendors',[VendorController::class,'allVendors']);
+    // Route::get('/activeVendors',[VendorController::class,'activeVendors']);
+    // Route::get('/expiredVendors',[VendorController::class,'expiredVendors']);
+    // Route::get('/Vendor/activate/{id?}/{sub?}',[VendorController::class,'vendorsActivate']);
 
 
     // TEMPLATES
@@ -69,4 +73,11 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/template/delete/{id?}',[WebsiteController::class, 'delete']);
     Route::get('/template/byIid/{id?}',[WebsiteController::class,'getById']);
     Route::get('/template/showall',[WebsiteController::class,'showAll']);
+
+    // couples
+
+    // Route::get('/get/couple/inactive',[])
+
+
+
 });
